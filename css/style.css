@@ -1,0 +1,23 @@
+html body {
+	background: #007DB2
+}
+
+#wishlist-info h4 {
+	color: white;
+	font-weight: lighter;
+}
+
+.row {
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#logo {
+	height:50px;
+}
+
+.navbar-brand {
+	height: 60px;
+	padding: 5px 0px;
+}
