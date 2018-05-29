@@ -1,36 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { View } from 'react-native';
+import * as d3 from 'd3';
+import {Header} from './src/components/common';
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>
-          Welcome to React Native!
-        </Text>
+      <View>
+        <Header headerText='sup'/>
       </View>
     );
   }
 }
-
-const styles = {
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-
-};
