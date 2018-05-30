@@ -22,6 +22,18 @@ class WishlistChart extends Component {
 
     let colors = d3.schemeRdYlGn[headers.length];
     let bars = stackedSeries.map((item, index) => {
+      let borderTopLeft = 0;
+      let borderTopRight = 0;
+      let borderBottomLeft = 0;
+      let borderBottomRight = 0;
+
+      if (index == 0) {
+        borderTopLeft = 8;
+        borderBottomLeft = 8;
+      } else if (index == stackedSeries.length-1) {
+        borderTopRight = 8;
+        borderBottomRight = 8;
+      }
       return(
         <View x={x(item[0][0])}
           y="0"
@@ -29,6 +41,11 @@ class WishlistChart extends Component {
           height={50}
           backgroundColor={colors[index]}
           key={`${item.key}`}
+          borderTopLeftRadius={borderTopLeft}
+          borderTopRightRadius={borderTopRight}
+          borderBottomLeftRadius={borderBottomLeft}
+          borderBottomRightRadius={borderBottomRight}
+
         />
       )
     })
