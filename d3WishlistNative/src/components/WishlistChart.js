@@ -45,7 +45,6 @@ class WishlistChart extends Component {
           borderTopRightRadius={borderTopRight}
           borderBottomLeftRadius={borderBottomLeft}
           borderBottomRightRadius={borderBottomRight}
-
         />
       )
     })
