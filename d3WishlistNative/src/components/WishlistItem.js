@@ -5,8 +5,8 @@ import { CardSection } from './common';
 const WishlistItem = (props) => {
   return (
     <CardSection>
-      <Text>
-        { props.name }
+      <Text style={{color: props.color}}>
+        { props.name } - ${ props.price }
       </Text>
     </CardSection>
   );
