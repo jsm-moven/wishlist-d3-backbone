@@ -26,31 +26,41 @@ class WishlistChart extends Component {
       let borderTopRight = 0;
       let borderBottomLeft = 0;
       let borderBottomRight = 0;
-
+      let borderLeft = 0;
+      let borderRight = 0;
       if (index == 0) {
-        borderTopLeft = 8;
-        borderBottomLeft = 8;
+        borderTopLeft = 30;
+        borderBottomLeft = 30;
+        borderLeft = 2;
       } else if (index == stackedSeries.length-1) {
-        borderTopRight = 8;
-        borderBottomRight = 8;
+        borderTopRight = 30;
+        borderBottomRight = 30;
+        borderRight = 2;
       }
       return(
         <View x={x(item[0][0])}
           y="0"
           width={x(item[0][1]-item[0][0])}
-          height={50}
+          height={25}
           backgroundColor={colors[index]}
           key={`${item.key}`}
           borderTopLeftRadius={borderTopLeft}
           borderTopRightRadius={borderTopRight}
           borderBottomLeftRadius={borderBottomLeft}
           borderBottomRightRadius={borderBottomRight}
+          marginTop={50}
+          marginBottom={50}
+          borderBottomWidth={2}
+          borderTopWidth={2}
+          borderLeftWidth={borderLeft}
+          borderRightWidth={borderRight}
+          borderColor= {'white'}
         />
       )
     })
     return (
       <Card>
-        <CardSection>{bars}</CardSection>
+        <CardSection style={{backgroundColor: "#178DB9"}}>{bars}</CardSection>
       </Card>
     );
   }

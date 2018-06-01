@@ -17,6 +17,7 @@ class Wishlist extends Component {
           name={item.name}
           color={colors[item.order]}
           price={item.price}
+          number={+item.order + 1}
         />
       );
     });
